@@ -10,5 +10,9 @@ fi
 # Preserve vim colorscheme inside tmux
 alias tmux='tmux -2'
 
+# [18:00][user@host][~/working/dir]
+# $ 
 export PS1='[\A][\u@\h][\w]\n\$ '
 
+alias vi=vim
+export EDITOR=vim
