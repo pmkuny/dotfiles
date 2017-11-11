@@ -3,9 +3,11 @@ syntax on
 filetype plugin on
 filetype indent on
 set bg=dark
+colorscheme elflord
 
-" Line Nuumberring and Rulelr
+" Line Numbering and Ruler
 set number
+set relativenumber
 set autoread
 set ruler
 
