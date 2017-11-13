@@ -3,7 +3,7 @@ syntax on
 filetype plugin on
 filetype indent on
 set bg=dark
-colorscheme elflord
+colorscheme ron
 
 " Line Numbering and Ruler
 set number
@@ -21,3 +21,6 @@ set showmatch
 " Remove timeout delay before opening a new line with o/O
 set timeout timeoutlen=1000 ttimeoutlen=100
 
+" Tabs and Spaces
+set tabstop=4
+set expandtab
