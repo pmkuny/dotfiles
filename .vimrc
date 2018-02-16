@@ -15,7 +15,7 @@ set laststatus=2
 " Smartcase and Highlight Searching
 set ignorecase
 set smartcase
-set hlsearch
+set nohlsearch
 set incsearch
 set showmatch
 
