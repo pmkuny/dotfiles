@@ -10,6 +10,7 @@ set number
 set relativenumber
 set autoread
 set ruler
+set laststatus=2
 
 " Smartcase and Highlight Searching
 set ignorecase
@@ -17,6 +18,9 @@ set smartcase
 set hlsearch
 set incsearch
 set showmatch
+
+" Toggle highlighting of search results
+nnoremap <leader><space> :nohlsearch<cr>
 
 " Remove timeout delay before opening a new line with o/O
 set timeout timeoutlen=1000 ttimeoutlen=100
