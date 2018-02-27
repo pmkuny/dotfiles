@@ -28,3 +28,13 @@ set timeout timeoutlen=1000 ttimeoutlen=100
 " Tabs and Spaces
 set tabstop=4
 set expandtab
+
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+
+" On pressing tab, insert 4 spaces
+set expandtab
+set foldmethod=indent
+
+" Pathogen
+execute pathogen#infect()
