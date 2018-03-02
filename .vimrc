@@ -1,7 +1,11 @@
+" General / Syntax Highlighting
 set nocompatible
 syntax on
 filetype plugin on
 filetype indent on
+set noswapfile
+
+" Colorscheme
 set bg=dark
 colorscheme ron
 
@@ -15,12 +19,9 @@ set laststatus=2
 " Smartcase and Highlight Searching
 set ignorecase
 set smartcase
-set nohlsearch
+set hlsearch
 set incsearch
 set showmatch
-
-" Toggle highlighting of search results
-nnoremap <leader><space> :nohlsearch<cr>
 
 " Remove timeout delay before opening a new line with o/O
 set timeout timeoutlen=1000 ttimeoutlen=100
@@ -38,3 +39,4 @@ set foldmethod=indent
 
 " Pathogen
 execute pathogen#infect()
+
