@@ -38,5 +38,5 @@ set expandtab
 set foldmethod=indent
 
 " Pathogen
-execute pathogen#infect()
+" execute pathogen#infect()
 
