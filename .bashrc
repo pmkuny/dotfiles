@@ -15,4 +15,5 @@ alias tmux='tmux -2'
 export PS1='[\A][\u@\h][\w]\n\$ '
 
 alias vi=vim
+alias ls='ls --color=auto'
 export EDITOR=vim
