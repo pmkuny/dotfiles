@@ -17,3 +17,6 @@ export PS1='[\A][\u@\h][\w]\n\$ '
 alias vi=vim
 alias ls='ls --color=auto'
 export EDITOR=vim
+
+# Support vi-bindings on shell
+set -o vi
