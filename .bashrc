@@ -16,7 +16,7 @@ export PS1='[\A][\u@\h][\w]\n\$ '
 
 alias vi=vim
 alias python=python3
-alias pip='pip3.6'
+alias pip='pip3'
 alias ls='ls --color=auto'
 export EDITOR=vim
 
