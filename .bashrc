@@ -22,3 +22,7 @@ export EDITOR=vim
 
 # Support vi-bindings on shell
 set -o vi
+
+if $(which tmux | grep 'bin/tmux'); then
+    tmux
+fi
