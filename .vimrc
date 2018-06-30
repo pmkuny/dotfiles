@@ -4,6 +4,7 @@ syntax on
 filetype plugin on
 filetype indent on
 set noswapfile
+set visualbell
 
 " Colorscheme
 set bg=dark
