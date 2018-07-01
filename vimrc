@@ -38,6 +38,6 @@ set shiftwidth=4
 set expandtab
 set foldmethod=indent
 
-" Pathogen
-" execute pathogen#infect()
-
+call plug#begin('~/.vim/plugs/')
+Plug 'pearofducks/ansible-vim'
+call plug#end()
