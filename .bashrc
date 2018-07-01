@@ -26,3 +26,7 @@ set -o vi
 if $(which tmux | grep 'bin/tmux'); then
     tmux
 fi
+
+# For Vagrant/Virtualbox within WSL
+export PATH="$PATH:/mnt/c/Program Files/Oracle/VirtualBox"
+export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
