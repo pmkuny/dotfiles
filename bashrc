@@ -24,7 +24,9 @@ export EDITOR=vim
 set -o vi
 
 if $(which tmux | grep 'bin/tmux'); then
-    tmux
+    if [ ! -z $TMUX ]; then
+        tmux
+    fi
 fi
 
 # For Vagrant/Virtualbox within WSL

@@ -42,6 +42,6 @@ set foldmethod=indent
 " https://github.com/junegunn/vim-plug
 
 " Load Ansible Syntax Highlighting
-call plug#begin('~/.vim/plugs/')
-Plug 'pearofducks/ansible-vim'
-call plug#end()
+"call plug#begin('~/.vim/plugs/')
+"Plug 'pearofducks/ansible-vim'
+"call plug#end()
