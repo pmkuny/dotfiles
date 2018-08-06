@@ -12,7 +12,6 @@ colorscheme ron
 
 " Line Numbering and Ruler
 set number
-set relativenumber
 set autoread
 set ruler
 set laststatus=2
