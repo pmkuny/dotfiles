@@ -25,10 +25,13 @@ set -o vi
 
 if $(which tmux | grep 'bin/tmux'); then
     if [ ! -z $TMUX ]; then
-        tmux
+        tmux attach-session -t default || tmux -L
     fi
 fi
 
 # For Vagrant/Virtualbox within WSL
 export PATH="$PATH:/mnt/c/Program Files/Oracle/VirtualBox"
 export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
+
+# For Docker within WSL
+export DOCKER_HOST=tcp://0.0.0.0:2375
