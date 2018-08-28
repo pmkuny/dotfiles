@@ -8,7 +8,7 @@ set visualbell
 
 " Colorscheme
 set bg=dark
-colorscheme ron
+colorscheme pablo
 
 " Line Numbering and Ruler
 set number
@@ -41,6 +41,6 @@ set foldmethod=indent
 " https://github.com/junegunn/vim-plug
 
 " Load Ansible Syntax Highlighting
-"call plug#begin('~/.vim/plugs/')
-"Plug 'pearofducks/ansible-vim'
-"call plug#end()
+call plug#begin('~/.vim/plugs/')
+Plug 'pearofducks/ansible-vim'
+call plug#end()
