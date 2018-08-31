@@ -8,7 +8,7 @@ set visualbell
 
 " Colorscheme
 set bg=dark
-colorscheme pablo
+colorscheme ron
 
 " Line Numbering and Ruler
 set number
