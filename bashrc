@@ -20,7 +20,7 @@ alias pip='pip3'
 alias ls='ls --color=auto'
 export EDITOR=vim
 
-# Support vi-bindings on shell
+# Support vi-bindings in shell
 set -o vi
 
 if $(which tmux | grep 'bin/tmux'); then
