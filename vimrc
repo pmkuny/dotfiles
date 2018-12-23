@@ -12,7 +12,6 @@ colorscheme ron
 
 " Line Numbering and Ruler
 set number
-set relativenumber
 set autoread
 set ruler
 set laststatus=2
@@ -38,10 +37,3 @@ set shiftwidth=4
 set expandtab
 set foldmethod=indent
 
-" vim-plug: Plugin Manager (for Ansible Syntax Highlighting):
-" https://github.com/junegunn/vim-plug
-
-" Load Ansible Syntax Highlighting
-call plug#begin('~/.vim/plugs/')
-Plug 'pearofducks/ansible-vim'
-call plug#end()
