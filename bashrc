@@ -10,9 +10,9 @@ fi
 # Preserve vim colorscheme inside tmux
 alias tmux='tmux -2'
 
-# [18:00][user@host][~/working/dir]
+# [user@host][~/working/dir]
 # $ 
-export PS1='[\A][\u@\h][\w]\n\$ '
+export PS1='[\u@\h][\w]\n\$ '
 
 alias vi=vim
 alias python=python3
@@ -35,3 +35,12 @@ export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
 
 # For Docker within WSL
 export DOCKER_HOST=tcp://0.0.0.0:2375
+
+# Configure SSH agent, or kill on session end
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+    eval `ssh-agent -s`
+fi
+
+if [ -n "$SSH_AUTH_SOCK" ] ; then
+    eval `ssh-agent -k`
+fi
