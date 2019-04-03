@@ -37,10 +37,8 @@ export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
 export DOCKER_HOST=tcp://0.0.0.0:2375
 
 # Configure SSH agent, or kill on session end
-if [ -z "$SSH_AUTH_SOCK" ] ; then
+if [ -z "$SSH_AGENT_PID" ] ; then
     eval `ssh-agent -s`
 fi
 
-if [ -n "$SSH_AUTH_SOCK" ] ; then
-    eval `ssh-agent -k`
-fi
+
