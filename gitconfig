@@ -1,6 +1,6 @@
 [color]
   diff = auto
-  status = auto
+  status = always
   branch = auto
   interactive = auto
   ui = true
@@ -8,3 +8,5 @@
 [user]
   email = pmk62810@gmail.com
   name = Patrick Kuny
+[core]
+	pager = less -r
