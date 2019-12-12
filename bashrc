@@ -18,7 +18,7 @@ alias python='python3'
 alias pip='pip3'
 alias ls='ls -G'
 # Some git sync scripts
-alias sync='for dir in $(ls ~/code/); do echo -e "\nPulling $dir"; cd ~/code/$dir/; git checkout master; git pull origin master; cd ../; done'
+alias sync='for dir in $(ls ~/code/); do echo -e "\nPulling $dir/"; cd ~/code/$dir/; git checkout master; git pull origin master; cd ../; done'
 alias mfa-iam='aws iam list-virtual-mfa-devices | grep UserName | sort | cut -f 2 -d:'
 export EDITOR=vim
 
@@ -47,3 +47,5 @@ fi
 export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin"
 export GOOS="linux"
+
+export VAULT_ADDR=https://vault.fanthreesixty.com
