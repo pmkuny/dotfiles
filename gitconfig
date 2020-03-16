@@ -1,6 +1,6 @@
 [color]
   diff = auto
-  status = auto
+  status = always
   branch = auto
   interactive = auto
   ui = true
@@ -10,3 +10,5 @@
   name = Patrick Kuny
 [credential]
 	helper = cache
+[core]
+	pager = less -r

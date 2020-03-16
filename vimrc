@@ -29,11 +29,14 @@ set timeout timeoutlen=1000 ttimeoutlen=100
 " Tabs and Spaces
 set tabstop=4
 set expandtab
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+set list
+set listchars=tab:>~
 
 " when indenting with '>', use 4 spaces width
 set shiftwidth=4
 
-" On pressing tab, insert 4 spaces
-set expandtab
+" Use code folds based on indentation
 set foldmethod=indent
+
 
