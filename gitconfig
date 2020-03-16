@@ -8,3 +8,5 @@
 [user]
   email = pmk62810@gmail.com
   name = Patrick Kuny
+[credential]
+	helper = cache
