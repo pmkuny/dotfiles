@@ -42,10 +42,3 @@ export DOCKER_HOST=tcp://0.0.0.0:2375
 if [ -z "$SSH_AGENT_PID" ] && [ -z "$SSH_AUTH_SOCK" ] ; then
     eval `ssh-agent -s`
 fi
-
-# Go Stuff
-export GOPATH="$HOME/go"
-export PATH="$PATH:$GOPATH/bin"
-export GOOS="linux"
-
-export VAULT_ADDR=https://vault.fanthreesixty.com
