@@ -42,3 +42,6 @@ export DOCKER_HOST=tcp://0.0.0.0:2375
 if [ -z "$SSH_AGENT_PID" ] && [ -z "$SSH_AUTH_SOCK" ] ; then
     eval `ssh-agent -s`
 fi
+
+# PIP Locals
+export PATH="$PATH:~/.local/bin/"
