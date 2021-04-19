@@ -1,3 +1,4 @@
+  
 # Source global defaults if they exist
 if [ -f /etc/bashrc ] ; then
 	source /etc/bashrc
@@ -25,11 +26,11 @@ export EDITOR=vim
 # Support vi-bindings in shell
 set -o vi
 
-if $(which tmux | grep 'bin/tmux'); then
-    if [ ! -z $TMUX ]; then
-        tmux attach-session -t default || tmux -L
-    fi
-fi
+#if $(which tmux | grep 'bin/tmux'); then
+#    if [ ! -z $TMUX ]; then
+#        tmux attach-session -t default || tmux -L
+#    fi
+#fi
 
 # For Vagrant/Virtualbox within WSL
 export PATH="$PATH:/mnt/c/Program Files/Oracle/VirtualBox"
@@ -45,3 +46,10 @@ fi
 
 # PIP Locals
 export PATH="$PATH:~/.local/bin/"
+
+
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+. /home/kunyp/.local/lib/python3.8/site-packages/powerline/bindings/bash/powerline.sh
+
