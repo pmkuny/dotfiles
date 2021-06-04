@@ -52,7 +52,8 @@ fi
 export PATH="$PATH:~/.local/bin/"
 
 # Go
-export PATH="$PATH:/usr/local/go/bin"
+export GOROOT=/usr/local/go
+export PATH=$PATH:$GOROOT/bin
 
 # NPM
 export PATH="$PATH:~/.npm-packages/bin/"
