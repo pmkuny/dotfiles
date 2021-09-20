@@ -18,6 +18,7 @@ alias vi='vim'
 alias python='python3'
 alias pip='pip3'
 alias ls='ls --color=always'
+alias k='kubectl'
 
 # Some git sync scripts
 alias sync='for dir in $(ls ~/code/); do echo -e "\nPulling $dir/"; cd ~/code/$dir/; git checkout master; git pull origin master; cd ../; done'
