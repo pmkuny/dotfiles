@@ -6,7 +6,7 @@
   ui = true
   pager = true
 [user]
-  email = pmk62810@gmail.com
+	email = 31052319+pmkuny@users.noreply.github.com
   name = Patrick Kuny
 [credential]
 	helper = cache
