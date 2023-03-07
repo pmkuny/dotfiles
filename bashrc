@@ -59,3 +59,30 @@ export PATH=$PATH:$GOROOT/bin
 # NPM
 export PATH="$PATH:~/.npm-packages/bin/"
 
+###
+# Synth Shell Settings
+###
+
+##-----------------------------------------------------
+## synth-shell-prompt.sh
+if [ -f /home/ec2-user/.config/synth-shell/synth-shell-prompt.sh ] && [ -n "$( echo $- | grep i )" ]; then
+	source /home/ec2-user/.config/synth-shell/synth-shell-prompt.sh
+fi
+
+##-----------------------------------------------------
+## better-ls
+if [ -f /home/ec2-user/.config/synth-shell/better-ls.sh ] && [ -n "$( echo $- | grep i )" ]; then
+	source /home/ec2-user/.config/synth-shell/better-ls.sh
+fi
+
+##-----------------------------------------------------
+## alias
+if [ -f /home/ec2-user/.config/synth-shell/alias.sh ] && [ -n "$( echo $- | grep i )" ]; then
+	source /home/ec2-user/.config/synth-shell/alias.sh
+fi
+
+##-----------------------------------------------------
+## better-history
+if [ -f /home/ec2-user/.config/synth-shell/better-history.sh ] && [ -n "$( echo $- | grep i )" ]; then
+	source /home/ec2-user/.config/synth-shell/better-history.sh
+fi
