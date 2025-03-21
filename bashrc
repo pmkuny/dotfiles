@@ -14,11 +14,12 @@ export PS1='[\u@\h][\w]\n\$ '
 # Preserve vim colorscheme inside tmux
 alias tmux='tmux -2'
 
+# lazy aliases
 alias vi='vim'
 alias python='python3'
 alias pip='pip3'
 alias ls='ls --color=always'
-alias k='kubectl'
+alias k='kubecolor'
 
 # Some git sync scripts
 alias sync='for dir in $(ls ~/code/); do echo -e "\nPulling $dir/"; cd ~/code/$dir/; git checkout master; git pull origin master; cd ../; done'
@@ -33,14 +34,8 @@ export EDITOR=vim
 # Support vi-bindings in shell
 set -o vi
 
-if $(which tmux | grep 'bin/tmux'); then
-    if [ ! -z $TMUX ]; then
-        tmux attach-session -t default || tmux -L
-    fi
-fi
-
 # For Vagrant/Virtualbox within WSL
-# No longer relevant with WSL2
+# Only necessary for non-WSL2 installs
 export PATH="$PATH:/mnt/c/Program Files/Oracle/VirtualBox"
 export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
 
@@ -59,30 +54,10 @@ export PATH=$PATH:$GOROOT/bin
 # NPM
 export PATH="$PATH:~/.npm-packages/bin/"
 
-###
-# Synth Shell Settings
-###
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-##-----------------------------------------------------
-## synth-shell-prompt.sh
-if [ -f /home/ec2-user/.config/synth-shell/synth-shell-prompt.sh ] && [ -n "$( echo $- | grep i )" ]; then
-	source /home/ec2-user/.config/synth-shell/synth-shell-prompt.sh
-fi
-
-##-----------------------------------------------------
-## better-ls
-if [ -f /home/ec2-user/.config/synth-shell/better-ls.sh ] && [ -n "$( echo $- | grep i )" ]; then
-	source /home/ec2-user/.config/synth-shell/better-ls.sh
-fi
-
-##-----------------------------------------------------
-## alias
-if [ -f /home/ec2-user/.config/synth-shell/alias.sh ] && [ -n "$( echo $- | grep i )" ]; then
-	source /home/ec2-user/.config/synth-shell/alias.sh
-fi
-
-##-----------------------------------------------------
-## better-history
-if [ -f /home/ec2-user/.config/synth-shell/better-history.sh ] && [ -n "$( echo $- | grep i )" ]; then
-	source /home/ec2-user/.config/synth-shell/better-history.sh
-fi
+# Starship up
+eval "$(starship init bash)"
+. "$HOME/.cargo/env"
