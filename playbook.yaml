@@ -1,0 +1,76 @@
+---
+- name: Local Setup
+  hosts: localhost
+  tasks: 
+
+  - name: Create Base Folder
+    ansible.builtin.file:
+      path: ~/code/
+      mode: 0700
+      state: directory
+
+  - name: Tooling - Git
+    ansible.builtin.package:
+      name: git
+      state: latest
+
+  - name: Tooling - Install Homebrew
+    ansible.builtin.shell:
+      cmd: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+      creates: /home/linuxbrew/.linuxbrew/bin/brew
+
+  - name: Tooling - Install Homebrew Packages
+    ansible.builtin.shell:
+      cmd: /home/linuxbrew/.linuxbrew/bin/brew install {{ item }}
+    with_lines: cat /code/dotfiles/homebrew_pksg
+
+  - name: Tooling - Install Oh My Zsh
+    ansible.builtin.shell:
+      cmd: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+      creates: ~/.oh-my-zsh
+
+  - name: Tooling - Install Hack Nerd Font
+    ansible.builtin.shell:
+      cmd: /home/linuxbrew/.linuxbrew/bin/brew install font-hack-nerd-font
+
+  - name: Config - Remove Existing Dotfiles
+    ansible.builtin.file:
+      path: 
+        - "~/.bashrc"
+        - "~/.gitconfig"
+        - "~/.inputrc"
+        - "~/.tmux.conf"
+        - "~/.zshrc"
+      state: absent
+
+  - name: Config - Link Dotfiles
+    ansible.builtin.script:
+      cmd: "/code/dotfiles/link.sh"
+
+  - name: Config - Grab Dotfiles
+    ansible.builtin.git:
+      repo: "https://github.com/pmkuny/dotfiles"
+      dest: /code/dotfiles
+
+  - name: Test - Verify Homebrew
+    ansible.builtin.stat:
+      path: /home/linuxbrew/.linuxbrew/bin/brew
+    register: brew_check
+    failed_when: not brew_check.stat.exists
+
+  - name: Test - Verify Oh My Zsh
+    ansible.builtin.stat:
+      path: ~/.oh-my-zsh
+    register: omz_check
+    failed_when: not omz_check.stat.exists
+
+  - name: Test - Verify Dotfiles
+    ansible.builtin.stat:
+      path: /code/dotfiles
+    register: dotfiles_check
+    failed_when: not dotfiles_check.stat.exists
+
+
+
+
+
