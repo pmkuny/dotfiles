@@ -35,6 +35,7 @@ six
 sqlite
 tcptraceroute
 terraform
+tmux
 xmlstarlet
 xz
 zsh-autosuggestions
