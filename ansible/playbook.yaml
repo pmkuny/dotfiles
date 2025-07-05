@@ -84,6 +84,6 @@
 
   - name: Test - Verify Dotfiles
     ansible.builtin.stat:
-      path: /code/dotfiles
+      path: ~/dotfiles
     register: dotfiles_check
     failed_when: not dotfiles_check.stat.exists
