@@ -23,6 +23,7 @@ libnghttp2
 libuv
 mpdecimal
 mtr
+neovim
 nvm
 openjdk
 openssh
