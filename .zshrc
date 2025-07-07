@@ -1,15 +1,8 @@
-# Source global defaults if they exist
-if [ -f /etc/bashrc ] ; then
-    source /etc/bashrc
-fi
+
 
 #################################
 # User Aliases and Configurations
 #################################
-
-# [user@host][~/working/dir]
-# $ 
-export PS1='[\u@\h][\w]\n\$ '
 
 # Preserve vim colorscheme inside tmux
 alias tmux='tmux -2'
