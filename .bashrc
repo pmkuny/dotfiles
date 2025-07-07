@@ -15,7 +15,8 @@ export PS1='[\u@\h][\w]\n\$ '
 alias tmux='tmux -2'
 
 # lazy aliases
-alias vi='vim'
+alias vi='nvim'
+alias vim='nvim'
 alias python='python3'
 alias pip='pip3'
 alias ls='ls --color=always'
