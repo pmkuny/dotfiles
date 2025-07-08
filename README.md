@@ -22,9 +22,21 @@ Personal configuration files and automated setup for development environments.
 
 ## Automated Setup
 
-The `playbook.yaml` Ansible playbook automates environment setup:
+### Preferred
 
-### What it does:
+Use GNU stow to link the files in this directory to ~/.config/$file  `.stowrc` handles this target linkage, so you can change it if you want.
+
+### Usage
+
+```bash
+stow .
+```
+
+### Alternative - Ansible
+
+The `playbook.yaml` Ansible playbook automates environment setup.
+
+### Ansible - What it does:
 1. **Installs Git** for version control
 2. **Installs Oh My Zsh** shell framework
 3. **Clones dotfiles** from GitHub repository
